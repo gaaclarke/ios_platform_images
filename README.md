@@ -14,16 +14,13 @@ Ideally it would be integrated into Flutter's plugins.
 import 'package:native_images/native_images.dart';
 
 Widget build(BuildContext context) {
-  // ...
-  return DecoratedBox(
-    decoration: BoxDecoration(
-      image: DecorationImage(
-        image: NativeImage('Foo'),
-        // ...
+  return MaterialApp(
+    home: Scaffold(
+      body: Center(
+        child: Image(image: NativeImages.load("pug")),
       ),
-      // ...
+      //..
     ),
   );
-  // ...
 }
 ```
