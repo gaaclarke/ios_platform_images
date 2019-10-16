@@ -18,12 +18,10 @@
       setMethodCallHandler:^(FlutterMethodCall *call, FlutterResult result) {
         if ([@"loadImage" isEqualToString:call.method]) {
           NSString* name = call.arguments;
-          if (@available(iOS 9.0, *)) {
-            UIImage* image = [UIImage imageNamed:name];
-            NSData* data = UIImagePNGRepresentation(image);
-            result([FlutterStandardTypedData typedDataWithBytes:data]);
-            return;
-          }
+          UIImage* image = [UIImage imageNamed:name];
+          NSData* data = UIImagePNGRepresentation(image);
+          result([FlutterStandardTypedData typedDataWithBytes:data]);
+          return;
         } 
         result(FlutterMethodNotImplemented);
       }];
