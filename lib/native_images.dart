@@ -61,4 +61,8 @@ class NativeImages {
   static FutureMemoryImage load(String name) {
     return FutureMemoryImage(_channel.invokeMethod('loadImage', name));
   }
+
+  static Future<String> loadURL(String name, [String ext]) {
+    return _channel.invokeMethod<String>('loadURL', [name, ext]);
+  }
 }

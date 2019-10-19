@@ -22,7 +22,14 @@
           NSData* data = UIImagePNGRepresentation(image);
           result([FlutterStandardTypedData typedDataWithBytes:data]);
           return;
-        } 
+        } else if ([@"loadURL" isEqualToString:call.method]) {
+          NSArray* args = call.arguments;
+          NSString* name = args[0];
+          NSString* extension = args[1];
+          NSURL* url = [[NSBundle mainBundle] URLForResource:name withExtension:extension];
+          result(url.absoluteString);
+          return;
+        }
         result(FlutterMethodNotImplemented);
       }];
 }
