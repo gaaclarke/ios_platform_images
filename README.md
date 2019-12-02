@@ -1,26 +1,14 @@
-# Native Images
+# ios_platform_images
 
-A Flutter plugin to access various native image resources from Flutter.
+A new flutter plugin project.
 
-## Usage
+## Getting Started
 
-This plugin is experimental and must be manually integrated into your app.
-Ideally it would be integrated into Flutter's plugins.
+This project is a starting point for a Flutter
+[plug-in package](https://flutter.dev/developing-packages/),
+a specialized package that includes platform-specific implementation code for
+Android and/or iOS.
 
-### Example
-
-``` dart
-// Import package
-import 'package:native_images/native_images.dart';
-
-Widget build(BuildContext context) {
-  return MaterialApp(
-    home: Scaffold(
-      body: Center(
-        child: Image(image: NativeImages.load("pug")),
-      ),
-      //..
-    ),
-  );
-}
-```
+For help getting started with Flutter, view our 
+[online documentation](https://flutter.dev/docs), which offers tutorials, 
+samples, guidance on mobile development, and a full API reference.

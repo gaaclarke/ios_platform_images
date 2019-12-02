@@ -5,6 +5,3 @@
 .pub/
 
 build/
-pubspec.lock
-.idea/
-.metadata

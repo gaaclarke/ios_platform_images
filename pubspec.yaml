@@ -1,4 +1,4 @@
-name: native_images
+name: ios_platform_images
 description: A new flutter plugin project.
 version: 0.0.1
 author:
@@ -25,8 +25,8 @@ flutter:
   # be modified. They are used by the tooling to maintain consistency when
   # adding or updating assets for this project.
   plugin:
-    androidPackage: com.example.native_images
-    pluginClass: NativeImagesPlugin
+    androidPackage: com.example.ios_platform_images
+    pluginClass: IosPlatformImagesPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

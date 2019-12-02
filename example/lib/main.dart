@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:native_images/native_images.dart';
+import 'package:ios_platform_images/ios_platform_images.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Image(image: NativeImages.load("pug")),
+          child: Image(image: IosPlatformImages.load("pug")),
         ),
       ),
     );
