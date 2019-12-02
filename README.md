@@ -1,14 +1,26 @@
-# ios_platform_images
+# IOS Platform Images
 
-A new flutter plugin project.
+A Flutter plugin to access various host image resources from Flutter.
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+This plugin is experimental and must be manually integrated into your app.
+Ideally it would be integrated into Flutter's plugins.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+### Example
+
+``` dart
+// Import package
+import 'package:ios_platform_images/ios_platform_images.dart';
+
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      body: Center(
+        child: Image(image: IosPlatformImages.load("pug")),
+      ),
+      //..
+    ),
+  );
+}
+```
