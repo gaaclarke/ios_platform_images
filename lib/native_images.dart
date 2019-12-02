@@ -25,17 +25,17 @@ class FutureMemoryImage extends ImageProvider<FutureMemoryImage> {
   }
 
   @override
-  ImageStreamCompleter load(FutureMemoryImage key) {
+  ImageStreamCompleter load(FutureMemoryImage key, DecoderCallback decode) {
     return MultiFrameImageStreamCompleter(
-      codec: _loadAsync(key),
+      codec: _loadAsync(key, decode),
       scale: key.scale,
     );
   }
 
-  Future<ui.Codec> _loadAsync(FutureMemoryImage key) async {
+  Future<ui.Codec> _loadAsync(FutureMemoryImage key, DecoderCallback decode) async {
     assert(key == this);
     return futureBytes.then((Uint8List bytes) {
-      return PaintingBinding.instance.instantiateImageCodec(bytes);
+      return decode(bytes);
     });
   }
 
