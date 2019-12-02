@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - ios_platform_images (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - ios_platform_images (from `.symlinks/plugins/ios_platform_images/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  ios_platform_images:
+    :path: ".symlinks/plugins/ios_platform_images/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  ios_platform_images: 1e94a6d9c071c45fc1b08b1ebca9ab413d16c27e
+
+PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83
+
+COCOAPODS: 1.8.3

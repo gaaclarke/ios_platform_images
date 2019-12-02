@@ -1,6 +1,6 @@
-# Native Images
+# IOS Platform Images
 
-A Flutter plugin to access various native image resources from Flutter.
+A Flutter plugin to access various host image resources from Flutter.
 
 ## Usage
 
@@ -11,13 +11,13 @@ Ideally it would be integrated into Flutter's plugins.
 
 ``` dart
 // Import package
-import 'package:native_images/native_images.dart';
+import 'package:ios_platform_images/ios_platform_images.dart';
 
 Widget build(BuildContext context) {
   return MaterialApp(
     home: Scaffold(
       body: Center(
-        child: Image(image: NativeImages.load("pug")),
+        child: Image(image: IosPlatformImages.load("pug")),
       ),
       //..
     ),
