@@ -19,6 +19,9 @@
 /// "assets/2.0x/foo.png".
 ///
 /// See also https://flutter.dev/docs/development/ui/assets-and-images
+///
+/// Note: We don't yet support images from package dependencies (ex.
+/// `AssetImage('icons/heart.png', package: 'my_icons')`).
 + (UIImage*)flutterImageWithName:(NSString*)name;
 
 @end
