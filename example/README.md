@@ -1,6 +1,6 @@
-# native_images_example
+# ios_platform_images_example
 
-Demonstrates how to use the native_images plugin.
+Demonstrates how to use the ios_platform_images plugin.
 
 ## Getting Started
 
