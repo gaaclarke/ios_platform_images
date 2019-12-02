@@ -24,3 +24,6 @@ Widget build(BuildContext context) {
   );
 }
 ```
+
+## Attribution ##
+`pug.jpg` courtesy of [Charles](https://www.pexels.com/photo/adult-black-pug-1851164/).
