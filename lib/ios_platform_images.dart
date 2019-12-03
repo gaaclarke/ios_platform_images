@@ -72,6 +72,8 @@ class IosPlatformImages {
   /// Loads an image from asset catalogs.  The equivalent would be:
   /// `[UIImage imageNamed:name]`.
   ///
+  /// Throws an exception if the image can't be found.
+  ///
   /// See [https://developer.apple.com/documentation/uikit/uiimage/1624146-imagenamed?language=objc]
   static FutureMemoryImage load(String name) {
     return FutureMemoryImage(_channel.invokeMethod('loadImage', name));
@@ -79,6 +81,8 @@ class IosPlatformImages {
 
   /// Loads an URL for a resource.  The equivalent would be:
   /// `[[NSBundle mainBundle] URLForResource:name withExtension:ext]`.
+  ///
+  /// Returns null if the resource can't be found.
   ///
   /// See [https://developer.apple.com/documentation/foundation/nsbundle/1411540-urlforresource?language=objc]
   static Future<String> loadURL(String name, [String ext]) {
