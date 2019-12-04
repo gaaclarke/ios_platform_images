@@ -20,9 +20,13 @@
           NSString* name = call.arguments;
           UIImage* image = [UIImage imageNamed:name];
           NSData* data = UIImagePNGRepresentation(image);
-          result([FlutterStandardTypedData typedDataWithBytes:data]);
+          if (data) {
+            result([FlutterStandardTypedData typedDataWithBytes:data]);
+          } else {
+            result(nil);
+          }
           return;
-        } else if ([@"loadURL" isEqualToString:call.method]) {
+        } else if ([@"resolveURL" isEqualToString:call.method]) {
           NSArray* args = call.arguments;
           NSString* name = args[0];
           NSString* extension = args[1];

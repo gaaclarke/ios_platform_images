@@ -79,13 +79,13 @@ class IosPlatformImages {
     return FutureMemoryImage(_channel.invokeMethod('loadImage', name));
   }
 
-  /// Loads an URL for a resource.  The equivalent would be:
+  /// Resolves an URL for a resource.  The equivalent would be:
   /// `[[NSBundle mainBundle] URLForResource:name withExtension:ext]`.
   ///
   /// Returns null if the resource can't be found.
   ///
   /// See [https://developer.apple.com/documentation/foundation/nsbundle/1411540-urlforresource?language=objc]
-  static Future<String> loadURL(String name, [String ext]) {
-    return _channel.invokeMethod<String>('loadURL', [name, ext]);
+  static Future<String> resolveURL(String name, [String ext]) {
+    return _channel.invokeMethod<String>('resolveURL', [name, ext]);
   }
 }
