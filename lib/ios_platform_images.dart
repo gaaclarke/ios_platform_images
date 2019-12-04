@@ -19,7 +19,7 @@ class FutureMemoryImage extends ImageProvider<FutureMemoryImage> {
         assert(scale != null);
 
   final Future<Uint8List> _futureBytes;
-  /// Scalar used to denote high resolution images.
+  /// The scale to place in the ImageInfo object of the image.
   final double scale;
 
   /// See [ImageProvider.obtainKey].
