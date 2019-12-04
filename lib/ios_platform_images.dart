@@ -62,7 +62,7 @@ class IosPlatformImages {
     return FutureMemoryImage(_channel.invokeMethod('loadImage', name));
   }
 
-  static Future<String> loadURL(String name, [String ext]) {
-    return _channel.invokeMethod<String>('loadURL', [name, ext]);
+  static Future<String> resolveURL(String name, [String ext]) {
+    return _channel.invokeMethod<String>('resolveURL', [name, ext]);
   }
 }

@@ -26,7 +26,7 @@
             result(nil);
           }
           return;
-        } else if ([@"loadURL" isEqualToString:call.method]) {
+        } else if ([@"resolveURL" isEqualToString:call.method]) {
           NSArray* args = call.arguments;
           NSString* name = args[0];
           NSString* extension = args[1];
