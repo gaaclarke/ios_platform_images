@@ -10,7 +10,7 @@ class IosPlatformImagesPlugin: MethodCallHandler {
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "ios_platform_images")
+      val channel = MethodChannel(registrar.messenger(), "plugins.flutter.io/ios_platform_images")
       channel.setMethodCallHandler(IosPlatformImagesPlugin())
     }
   }
@@ -19,7 +19,7 @@ class IosPlatformImagesPlugin: MethodCallHandler {
     if (call.method == "getPlatformVersion") {
       result.success("Android ${android.os.Build.VERSION.RELEASE}")
     } else {
-      result.notImplemented()
+      result.error("AndroidNotSupported", "This plugin is for iOS only.", null)
     }
   }
 }
